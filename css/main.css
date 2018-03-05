@@ -3172,6 +3172,23 @@ html.no-csstransitions .home-content__main {
     font-size: 1.2rem;
 }
 
+.message-success .container #header {
+    display: none;
+}
+.message-success .container {
+    background: none;
+    border: none;
+}
+.message-success .container h1 {
+    color: #4b94ff;
+}
+.message-success .container p {
+    color: #fff;
+}
+.message-success .container .footer {
+    display: none;
+}
+
 
 /* form loader
  * ----------------------------------------------- */

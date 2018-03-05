@@ -2210,8 +2210,10 @@ html.no-csstransitions .home-content__main {
 .about-desc {
     line-height: 1.75;
     max-width: 1024px;
-    color: white; 
+    color: white;
     padding-left: 30px;
+    position: relative;
+    z-index: 1;
 }
 
 .about-retro {
@@ -2445,7 +2447,7 @@ html.no-csstransitions .home-content__main {
 @media only screen and (max-width: 800px) {
     .services-list {
         margin-top: 4.2rem;
-        max-width: 500px;
+        max-width: 100%;
         text-align: center;
     }
     .services-list .service-item:nth-child(n) {

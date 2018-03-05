@@ -2104,8 +2104,8 @@ html.no-csstransitions .home-content__main {
         text-align: center;
     }
     .home-content__buttons .btn {
-        display: block;
-        width: 70%;
+        /*display: block;
+        width: 70%;*/
         margin: 1.5rem 0 0 0;
     }
     .home-social {

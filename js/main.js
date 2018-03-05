@@ -328,9 +328,11 @@
     var clContactForm = function() {
 
         var redirect = $('#contactRedirect');
-        var url = redirect.val();
-        url = url.replace('SITEDOMAIN', document.location.host);
-        redirect.val(url);
+        if (redirect.length > 0) {
+            var url = redirect.val();
+            url = url.replace('SITEDOMAIN', document.location.host);
+            redirect.val(url);
+        }
 
         // $('#contact-email').on('blur', function () {
         //     $('#contact-reply-to').val($(this).val());

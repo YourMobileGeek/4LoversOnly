@@ -2491,6 +2491,28 @@ html.no-csstransitions .home-content__main {
 }
 
 
+/*
+Gallery
+*/
+#gallery {
+    background: url('/images/static.gif') no-repeat top center;
+    background-size: cover;
+}
+
+#gallery nav a {
+    border-right: 1px solid white;
+    color: white;
+    display: inline-block;
+    padding: 0px 25px;
+}
+#gallery nav a:last-child {
+    border-right: none;
+}
+
+#gallery img {
+    width: 100%;
+}
+
 
 /* ===================================================================
  * # works

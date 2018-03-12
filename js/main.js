@@ -442,6 +442,35 @@
         });
     };
 
+    var galleryInit = function() {
+        var gallery = $('#gallery');
+        if (gallery.length == 0) {
+            return ;
+        }
+        var navItems = gallery.find('nav a');
+        var images = [];
+        var image0 = gallery.find('#gallery-0');
+        var image1 = gallery.find('#gallery-1');
+        var image2 = gallery.find('#gallery-2');
+        var image3 = gallery.find('#gallery-3');
+        $.get('images.json', function (data) {
+            images = data;
+            image0.attr('src', images[0][0]);
+            image1.attr('src', images[0][1]);
+            image2.attr('src', images[0][2]);
+            image3.attr('src', images[0][3]);
+        });
+
+        navItems.click(function (e) {
+            e.preventDefault();
+            var index = $(this).data('city');
+            image0.attr('src', images[index][0]);
+            image1.attr('src', images[index][1]);
+            image2.attr('src', images[index][2]);
+            image3.attr('src', images[index][3]);
+        });
+    };
+
 
    /* Initialize
     * ------------------------------------------------------ */
@@ -461,6 +490,7 @@
         clAOS();
         clAjaxChimp();
         clBackToTop();
+        galleryInit();
 
     })();
 

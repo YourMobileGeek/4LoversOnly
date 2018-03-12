@@ -501,6 +501,16 @@
         video.click(function (e) {
             e.stopPropagation();
         });
+        if (
+            typeof window.localStorage == 'object' &&
+            localStorage.getItem('skipVideo') == null
+        ) {
+            setTimeout(function() {
+                video.load();
+                video.play();
+                videoContainer.fadeIn();
+            }, 1000);
+        }
     };
 
 

@@ -386,6 +386,31 @@ dd {
 /* ------------------------------------------------------------------- 
  * ## responsive video container
  * ------------------------------------------------------------------- */
+#header-video i {
+    font-size: 48px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+#home .home-content__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    box-sizing: border-box;
+    z-index: 500;
+}
+#home .home-content__video video {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;

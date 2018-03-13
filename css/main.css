@@ -83,6 +83,7 @@ body {
     color: #757575;
     margin: 0;
     padding: 0;
+    /*cursor: url('/images/Double-Cup-Cursor.png'), default;*/
 }
 
 
@@ -1771,6 +1772,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     background-color: transparent;
     position: relative;
     display: table;
+}
+.s-home.splash {
+    background-color: rgba(64,64,255,0.7);
 }
 
 .s-home .shadow-overlay {

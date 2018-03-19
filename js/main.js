@@ -479,38 +479,26 @@
     };
 
     var multiMediaInit = function () {
-        var videoLink = $('#header-video');
-        var videoContainer = $('.home-content__video');
-        if (videoContainer.length != 1) {
+        if ($('.fullscreen-bg__video').length < 1)
             return;
-        }
-        var video = videoContainer.find('video').get(0);
-        // videoContainer = videoContainer[0];
-        videoLink.click(function (e) {
+
+        var video = $('.fullscreen-bg__video').get(0);
+        $('.fullscreen-bg__control a').click(function (e) {
             e.preventDefault();
+            $(this).find('i').toggle();
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+        setTimeout(function() {
             video.load();
             video.play();
-            videoContainer.fadeIn();
-            stopAudio();
-        });
-        videoContainer.click(function () {
-            video.load();
-            videoContainer.fadeOut();
-            startAudio();
-        });
-        video.click(function (e) {
-            e.stopPropagation();
-        });
-        if (
-            typeof window.localStorage == 'object' &&
-            localStorage.getItem('skipVideo') == null
-        ) {
-            setTimeout(function() {
-                video.load();
-                video.play();
-                videoContainer.fadeIn();
-            }, 1000);
-        }
+            if (!video.paused) {
+                $('.fullscreen-bg__control i').toggle();
+            }
+        }, 1000);
     };
 
 

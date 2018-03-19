@@ -2270,9 +2270,9 @@ html.no-csstransitions .home-content__main {
 .s-about {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
-    background-color: #000000;
-    color: #010507;
     position: relative;
+    background: url('/images/static.gif') no-repeat top center;
+    background-size: cover;
 }
 
 .s-about .section-header.has-bottom-sep::before {
@@ -3583,9 +3583,7 @@ footer .row {
  * ## footer bottom
  * --------------------------------------------------------------- */
 .footer-bottom {
-    margin-top: 5.4rem;
     text-align: center;
-    font-size: 14px;
 }
 
 .footer-bottom .copyright span {

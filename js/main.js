@@ -455,10 +455,10 @@
         var image3 = gallery.find('#gallery-3');
         $.get('images.json', function (data) {
             images = data;
-            image0.attr('src', images[0][0]);
-            image1.attr('src', images[0][1]);
-            image2.attr('src', images[0][2]);
-            image3.attr('src', images[0][3]);
+            image0.attr('src', images[Math.floor(Math.random()*5)][0]);
+            image1.attr('src', images[Math.floor(Math.random()*5)][1]);
+            image2.attr('src', images[Math.floor(Math.random()*5)][2]);
+            image3.attr('src', images[Math.floor(Math.random()*5)][3]);
         });
 
         navItems.click(function (e) {

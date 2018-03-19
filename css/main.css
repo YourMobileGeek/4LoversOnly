@@ -83,7 +83,7 @@ body {
     color: #757575;
     margin: 0;
     padding: 0;
-    /*cursor: url('/images/Double-Cup-Cursor.png'), default;*/
+    /*cursor: url('/images/Double-Cup-Cursor-128x96.png');*/
 }
 
 
@@ -2405,6 +2405,7 @@ html.no-csstransitions .home-content__main {
     padding-top: 16.2rem;
     padding-bottom: 13.2rem;
     background-image: url("../images/tour.png");
+    background-size: cover;
     color: #ffffff;
     position: relative;
 }

@@ -601,6 +601,12 @@ form,
     width: 100%;
     display: table;
 }
+#preloader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
 
 .no-js #preloader, .oldie #preloader {
     display: none;

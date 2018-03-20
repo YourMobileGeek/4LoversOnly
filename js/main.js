@@ -492,13 +492,18 @@
                 video.pause();
             }
         });
-        setTimeout(function() {
-            video.load();
-            video.play();
-            if (!video.paused) {
-                $('.fullscreen-bg__control i').toggle();
-            }
-        }, 1000);
+        if (
+            typeof window.localStorage != 'object' ||
+            localStorage.getItem('skipVideo') == null
+        ) {
+            setTimeout(function() {
+                video.load();
+                video.play();
+                if (!video.paused) {
+                    $('.fullscreen-bg__control i').toggle();
+                }
+            }, 1000);
+        }
     };
 
 

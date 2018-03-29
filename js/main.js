@@ -443,6 +443,64 @@
     };
 
     var galleryInit = function() {
+        $.get('images.json', function (data) {
+            console.log(data);
+            galleryClickHandlers(data);
+        });
+        $('#gallery-overlay').click(function (e) {
+            e.preventDefault();
+            $('#gallery-inner').html('<div id="gallery-root"><div class="swiper-wrapper"></div></div>');
+            $(this).removeClass('active');
+        });
+        $('#gallery-inner').click(function (e) {
+            e.stopPropagation();
+        });
+    };
+    var galleryClickHandlers = function(data) {
+        $('.gallery-init').each(function () {
+            var element = $(this);
+            var images = [];
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].key == element.data('galleryKey')) {
+                    console.log('matched key: ' + data[i].key);
+                    if (data[i].images.length > 0) {
+                        element.addClass('has-gallery');
+                        images = data[i].images;
+                        element.click(function (e) {
+                            e.preventDefault();
+                            startupGallery(images);
+                        });
+                    } else {
+                        element.addClass('no-gallery');
+                    }
+                }
+            }
+        });
+    };
+
+    var startupGallery = function (images) {
+        var root = $('#gallery-root');
+        var wrapper = root.find('.swiper-wrapper'),
+            id = root.attr('id');
+        for (var i = 0; i < images.length; i++) {
+            wrapper.append('<div class="swiper-slide"><img src="'+images[i]+'" /></div>');
+        }
+        root.append('<div class="swiper-pagination"></div>');
+        root.parent().parent().addClass('active');
+        var mySwiper = new Swiper('#'+id, {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // calculateHeight: true,
+            autoplay: {
+                delay: 4000
+            },
+            fadeEffect: {
+                crossFade: true
+            }
+        });
     };
 
     var startAudio = function () {
@@ -499,7 +557,7 @@
         clAOS();
         clAjaxChimp();
         clBackToTop();
-        // galleryInit();
+        galleryInit();
         multiMediaInit();
 
     })();

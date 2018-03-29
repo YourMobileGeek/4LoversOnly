@@ -65,6 +65,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
 
@@ -319,12 +320,19 @@
         </div> -->
 
         <div class="row" data-aos="fade-up">
-            <div class="col-1-2 mob-full"><img src="/images/LA.png" id="gallery-0"/></div>
-            <div class="col-1-2 mob-full"><img src="/images/MIA.png" id="gallery-1"/></div>
+            <div class="col-1-2 mob-full"><img src="/images/LA.png" class="gallery-init" data-gallery-key="LA" id="gallery-0"/></div>
+            <div class="col-1-2 mob-full"><img src="/images/MIA.png" class="gallery-init" data-gallery-key="Miami" id="gallery-1"/></div>
         </div>
         <div class="row" data-aos="fade-up">
-            <div class="col-1-2 mob-full"><img src="/images/Dallas.png" id="gallery-2"></div>
-            <div class="col-1-2 mob-full"><img src="/images/NYC.png" id="gallery-3"></div>
+            <div class="col-1-2 mob-full"><img src="/images/Dallas.png" class="gallery-init" data-gallery-key="Dallas" id="gallery-2"></div>
+            <div class="col-1-2 mob-full"><img src="/images/NYC.png" class="gallery-init" data-gallery-key="NY" id="gallery-3"></div>
+        </div>
+        <div id="gallery-overlay">
+            <div id="gallery-inner">
+                <div id="gallery-root">
+                    <div class="swiper-wrapper"></div>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-full">
@@ -340,7 +348,7 @@
     </section> <!-- end gallery -->
 
     <!-- contact -->
-    <section id="gallery" class="s-clients">
+    <section id="contact" class="s-clients">
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
@@ -351,7 +359,6 @@
                 <p><a href="mailto:devin@weareperspective.co" style="color:white";>devin@weareperspective.co</a></p>
             </div>
         </div> <!-- end section-header -->
-        
     </section> <!-- end contact -->
 
     <!-- footer
@@ -428,6 +435,7 @@
     ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>

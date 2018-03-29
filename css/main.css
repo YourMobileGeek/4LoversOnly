@@ -2588,10 +2588,62 @@ Gallery
     border-right: none;
 }
 
-#gallery img {
+#gallery .row img {
     width: 100%;
 }
 
+#gallery .gallery-init.has-gallery {
+    cursor: pointer;
+}
+#gallery .gallery-init.has-gallery:hover {
+    box-shadow: 0 0 20px #4b94ff;
+}
+#gallery-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+}
+#gallery-overlay:after {
+    content:"close";
+    cursor: pointer;
+    display: block;
+    top: 0;
+    right: 0;
+    color: #4b94ff;
+    background: #000;
+    padding: 10px 20px;
+    position: absolute;
+}
+#gallery-overlay.active {
+    display: block;
+}
+#gallery-inner {
+    padding: 50px;
+}
+.swiper-pagination .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.5;
+    height: 10px;
+    width: 10px;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+    background: #4b94ff;
+    opacity: 1;
+}
+.swiper-slide {
+    height: 600px;
+}
+.swiper-slide img {
+    top: -50%;
+    transform: translate(-50%);
+    position: absolute;
+    left: 50%;
+}
 
 /* ===================================================================
  * # works

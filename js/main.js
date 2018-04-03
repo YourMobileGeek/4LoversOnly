@@ -12,7 +12,8 @@
         mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'   // mailchimp url
     },
 
-    $WIN = $(window);
+    $WIN = $(window),
+    controlAudio = false;
 
     // Add the User Agent to the <html>
     // will be used for IE10 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0))
@@ -444,7 +445,6 @@
 
     var galleryInit = function() {
         $.get('images.json', function (data) {
-            console.log(data);
             galleryClickHandlers(data);
         });
         $('#gallery-overlay').click(function (e) {
@@ -462,7 +462,6 @@
             var images = [];
             for (var i = 0; i < data.length; i++) {
                 if (data[i].key == element.data('galleryKey')) {
-                    console.log('matched key: ' + data[i].key);
                     if (data[i].images.length > 0) {
                         element.addClass('has-gallery');
                         images = data[i].images;
@@ -515,13 +514,27 @@
             return;
 
         var video = $('.fullscreen-bg__video').get(0);
+        var audio = $('.fullscreen-bg__audio').get(0);
+        video.addEventListener('ended', function (e) {
+            controlAudio = true;
+            audio.volume = 0.2;
+            audio.play();
+        }, false);
         $('.fullscreen-bg__control a').click(function (e) {
             e.preventDefault();
             $(this).find('i').toggle();
-            if (video.paused) {
-                video.play();
+            if (controlAudio) {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
             } else {
-                video.pause();
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
             }
         });
         if (

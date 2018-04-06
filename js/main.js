@@ -488,6 +488,7 @@
         root.parent().parent().addClass('active');
         var mySwiper = new Swiper('#'+id, {
             loop: true,
+            touchEventsTarget: 'wrapper',
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,

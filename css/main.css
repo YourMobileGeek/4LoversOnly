@@ -524,6 +524,10 @@ th:last-child, td:last-child {
     -webkit-overflow-scrolling: touch;
 }
 
+#tour .btn {
+    width: 100%;
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## Spacing 

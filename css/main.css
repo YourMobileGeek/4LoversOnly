@@ -2138,6 +2138,9 @@ html.no-csstransitions .home-content__main {
     .home-content__main {
         max-width: 1000px;
     }
+    .optimo-larger {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -2146,6 +2149,9 @@ html.no-csstransitions .home-content__main {
     }
     .home-content__main {
         max-width: 800px;
+    }
+    .optimo-larger {
+        width: 50%;
     }
 }
 
@@ -2161,11 +2167,14 @@ html.no-csstransitions .home-content__main {
         padding-right: 80px;
         max-width: 680px;
     }
+    .optimo-larger {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 800px) {
     .home-content h3 {
-        font-size: 1.5rem;
+        font-size: 1.0rem;
     }
     .home-content h1 {
         font-size: 4rem;
@@ -2173,6 +2182,9 @@ html.no-csstransitions .home-content__main {
     .home-content__main {
         padding-right: 70px;
         max-width: 550px;
+    }
+    .optimo-larger {
+        width: 50%;
     }
 }
 
@@ -2198,6 +2210,9 @@ html.no-csstransitions .home-content__main {
     .home-content__line {
         right: 5.5rem;
     }
+    .optimo-larger {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2222,6 +2237,9 @@ html.no-csstransitions .home-content__main {
     }
     .home-content__line {
         height: 7.2rem;
+    }
+    .optimo-larger {
+        width: 50%;
     }
 }
 
@@ -2249,11 +2267,17 @@ html.no-csstransitions .home-content__main {
     .home-social {
         display: none;
     }
+    .optimo-larger {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 450px) {
     .home-content h1 {
         font-size: 3.3rem;
+    }
+    .optimo-larger {
+        width: 50%;
     }
 }
 
@@ -2266,6 +2290,9 @@ html.no-csstransitions .home-content__main {
     }
     .home-content__main {
         padding-top: 16.2rem;
+        width: auto;
+    }
+    .optimo-larger {
         width: auto;
     }
 }

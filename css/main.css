@@ -169,6 +169,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 @media only screen and (max-width: 600px) {
     h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
         margin-top: 5.1rem;
+        font-size: 2.3rem;
     }
 }
 
@@ -198,7 +199,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    font-size: 2.6rem;
+    font-size: 2.3rem;
     line-height: 1.3;
 }
 
@@ -2139,7 +2140,7 @@ html.no-csstransitions .home-content__main {
         max-width: 1000px;
     }
     .optimo-larger {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -2151,7 +2152,7 @@ html.no-csstransitions .home-content__main {
         max-width: 800px;
     }
     .optimo-larger {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -2168,7 +2169,7 @@ html.no-csstransitions .home-content__main {
         max-width: 680px;
     }
     .optimo-larger {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -2184,7 +2185,7 @@ html.no-csstransitions .home-content__main {
         max-width: 550px;
     }
     .optimo-larger {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -2211,7 +2212,7 @@ html.no-csstransitions .home-content__main {
         right: 5.5rem;
     }
     .optimo-larger {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -2239,7 +2240,7 @@ html.no-csstransitions .home-content__main {
         height: 7.2rem;
     }
     .optimo-larger {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -2268,7 +2269,7 @@ html.no-csstransitions .home-content__main {
         display: none;
     }
     .optimo-larger {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -2277,7 +2278,7 @@ html.no-csstransitions .home-content__main {
         font-size: 3.3rem;
     }
     .optimo-larger {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -2293,7 +2294,7 @@ html.no-csstransitions .home-content__main {
         width: auto;
     }
     .optimo-larger {
-        width: 90%;
+        width: 100%;
     }
 }
 

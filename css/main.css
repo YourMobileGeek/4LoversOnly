@@ -63,10 +63,11 @@ html {
     font-size: 10px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     html {
         font-size: 9.411764705882353px;
     }
+    .fullscreen-bg__video,
     .fullscreen-bg__control {
         display: none !important;
     }
@@ -87,6 +88,20 @@ body {
     margin: 0;
     padding: 0;
     /*cursor: url('/images/Double-Cup-Cursor-128x96.png');*/
+}
+
+.fullscreen-bg__fallback {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .fullscreen-bg__fallback {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
 }
 
 .fullscreen-bg {

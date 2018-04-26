@@ -511,7 +511,7 @@
     };
 
     var multiMediaInit = function () {
-        if ($('.fullscreen-bg__video').length < 1)
+        if ($('.fullscreen-bg__video').length < 1 || window.innerWidth <= 500)
             return;
 
         var video = $('.fullscreen-bg__video').get(0);
